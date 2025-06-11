@@ -41,10 +41,12 @@ const UseEffect = () => {
 
     // const [facts, setFacts] = useState([]);
 
-    // const [counter, setCounter] = useState(0);
-    // useEffect(()=>{
-    //     document.title=`clicked ${counter} times`
-    // },[counter])
+    // счётчик
+
+    const [counter, setCounter] = useState(0);
+    useEffect(()=>{
+        document.title=`clicked ${counter} times`
+    },[counter])
 
     const [searchText, setSearchText] = useState('');
     const [result, setResult] = useState({});
@@ -94,10 +96,7 @@ const UseEffect = () => {
             {/* <h1>
                 UseEffect hook
             </h1>
-            <h2>Counter: {counter}</h2>
-            <button onClick={()=>setCounter(counter-1)}>-</button>&nbsp;
-            <button onClick={()=>setCounter(counter+1)}>+</button>
-            <br></br>
+            
             <button onClick={getFacts}>get cat facts</button>
             <br></br>
             <button onClick={getFactsId}>get cat facts by id</button>
@@ -107,7 +106,10 @@ const UseEffect = () => {
                 renderFactList(facts) : null
             }
             </ul> */}
-
+            <h2>Counter: {counter}</h2>
+            <button onClick={()=>setCounter(counter-1)}>-</button>&nbsp;
+            <button onClick={()=>setCounter(counter+1)}>+</button>
+            <br></br>
             <label>
                 search book
                 <input onChange={onChange}/>
